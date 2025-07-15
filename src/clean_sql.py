@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS user_sessions (
     device VARCHAR(255)
 )
 """)
-
+cursor.execute("TRUNCATE TABLE user_sessions")
 # Insert data
 for _, row in df.iterrows():
     cursor.execute("""

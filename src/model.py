@@ -25,8 +25,8 @@ df['is_flagged'] = df['is_flagged'].apply(lambda x: 1 if x == -1 else 0)
 
 df['user_id'] = user_ids
 df.to_csv("data/predictions.csv", index=False)
-print("✅ Model predictions saved to data/predictions.csv with shape:", df.shape)
+print("Model predictions saved to data/predictions.csv with shape:", df.shape)
 
 # Optional: basic stats
 flagged = df['is_flagged'].sum()
-print(f"🔍 Users flagged as anomalies: {flagged} out of {len(df)}")
+print(f" Users flagged as anomalies: {flagged} out of {len(df)}")

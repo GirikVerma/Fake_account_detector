@@ -31,6 +31,8 @@ cursor.execute("""
     )
 """)
 
+cursor.execute("TRUNCATE TABLE predictions")
+
 # Insert predictions
 for _, row in df.iterrows():
     cursor.execute("""
